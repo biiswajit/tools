@@ -1,0 +1,5 @@
+This is another concept that’s orthogonal to the data model, but it’s a part of the interface to create commits.
+
+One way you might imagine implementing snapshot as described above is to have a “create snapshot” command that creates a new snapshot based on the _current state_ of the working directory. Some version control tools work like this, but not Git. We want clean snapshots, and it might not always be ideal to make a snapshot from the current state. For example, imagine a scenario where you’ve implemented two separate features, and you want to create two separate commits, where the first introduces the first feature, and the next introduces the second feature. Or imagine a scenario where you have debugging print statements added all over your code, along with a bug fix; you want to commit the bug fix while discarding all the print statements.
+
+Git accommodates such scenarios by allowing you to specify which modifications should be included in the next snapshot through a mechanism called the “staging area”.

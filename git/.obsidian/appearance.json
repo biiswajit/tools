@@ -1,5 +1,6 @@
 {
   "baseFontSize": 17,
   "interfaceFontFamily": "SF Pro Display",
-  "textFontFamily": "MonoLisa"
+  "textFontFamily": "MonoLisa",
+  "accentColor": "#d317aa"
 }
